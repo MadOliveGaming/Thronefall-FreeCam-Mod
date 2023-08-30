@@ -45,13 +45,13 @@ namespace FreeCamMod
             // Simply look for player to make sure we are in a scene where freecam should be enabled and not in a main menu or something
             var player = GameObject.Find("Horse_LOD1");
 
-            Camera camera = GameObject.Find("Main Camera").GetComponent<Camera>(); // FindFirstObjectByType<Camera>();
-            Camera ui = GameObject.Find("UI and HP Bar Cam").GetComponent<Camera>();
-            CameraRig cameraRig = FindFirstObjectByType<CameraRig>();
-            Player input = ReInput.players.GetPlayer(0);
-
             if (player != null)
             {
+                Camera camera = GameObject.Find("Main Camera").GetComponent<Camera>(); // FindFirstObjectByType<Camera>();
+                Camera ui = GameObject.Find("UI and HP Bar Cam").GetComponent<Camera>();
+                CameraRig cameraRig = FindFirstObjectByType<CameraRig>();
+                Player input = ReInput.players.GetPlayer(0);
+
                 if (!this.hasPlayer)
                 {
                     this.defaultOrtographic = camera.orthographicSize;
